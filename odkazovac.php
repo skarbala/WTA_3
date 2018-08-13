@@ -15,10 +15,10 @@ $data = load_data();
 <div class="container">
   <h1 class="text-center">Odkazovač</h1>
   <div class="col-md-6">
-    <h3>Novy odkaz</h3>
+    <h3>Nový odkaz</h3>
       <?php require_once "partials/odkazovac/add-new.form.php" ?>
 
-    <h3 class="sin-header">Vsetky odkazy<span>(<?php echo count($data) ?>)</span></h3>
+    <h3 class="sin-header">Všetky odkazy<span>(<?php echo count($data) ?>)</span></h3>
     <div class="sinsListArea">
         <?php if (!empty($data)) : ?>
           <ul class="list-of-sins">
@@ -34,7 +34,7 @@ $data = load_data();
               <?php endforeach ?>
           </ul>
           <button class="btn btn-block" data-toggle="modal" data-target="#sinCityModal">
-            Vymaz vsetky
+            Vymaž všetky
           </button>
         <?php endif ?>
     </div>
