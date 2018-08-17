@@ -1,9 +1,13 @@
+$primary-color: #f9596d;
+
 body {
-  background-color: #f6f7f8; }
+  background-color: #f6f7f8;
+}
 
 ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 li.sin {
   margin: 10px auto;
@@ -16,62 +20,79 @@ li.sin {
   -ms-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-box-shadow: 0px 0px 34px -12px #bdb7bd;
-  -moz-box-shadow: 0px 0px 34px -12px #bdb7bd;
-  box-shadow: 0px 0px 34px -12px #bdb7bd; }
+
+  -webkit-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  -moz-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+}
 
 li.sin div.description {
   color: white;
   float: right;
-  margin: 0; }
+  margin: 0;
+}
 
 div.description p {
   display: inline-block;
   margin: 0 20px;
-  float: right; }
+  float: right;
+}
 
 h1, h3 {
-  font-family: 'Shadows Into Light Two', cursive; }
+  font-family: 'Shadows Into Light Two', cursive;
+}
 
 h1 {
-  color: #f9596d;
-  font-size: 60px; }
+  color: $primary-color;
+  font-size: 60px;
+}
 
 h3 {
-  font-size: 2em; }
-  h3 span {
+  font-size: 2em;
+  span {
     float: right;
-    margin-right: 10px; }
+    margin-right: 10px;
+  }
+}
 
-div.detail div.title span.date {
-  float: right; }
-
-div.detail p {
-  margin: 20px 0; }
+div.detail {
+  div.title span.date {
+    float: right;
+  }
+  p {
+    margin: 20px 0;
+  }
+}
 
 div.tags li {
-  margin: 0 5px; }
-  div.tags li:nth-child(1) {
-    margin-left: 0; }
-  div.tags li:nth-child(even) {
-    color: #f9596d; }
+  margin: 0 5px;
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+  &:nth-child(even) {
+    color: $primary-color
+  }
+}
 
 li.sin a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 li.sin:hover {
   transform: scale(1.03);
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 input.form-control,
 textarea.form-control,
 button.btn {
   margin: 5px auto;
   border-radius: 5px;
-  border: none; }
+  border: none;
+}
 
 button.btn {
-  background-color: #f9596d;
+  background-color: $primary-color;;
   color: white;
   font-weight: 600;
   font-family: sincity, sans-serif;
@@ -80,35 +101,41 @@ button.btn {
   -ms-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  font-size: 16px; }
-  button.btn:hover {
+  font-size: 16px;
+  &:hover {
     transform: scale(1.03);
-    color: white; }
-  button.btn:active, button.btn:focus {
-    outline: none; }
+    color: white;
+  }
+  &:active, &:focus {
+    outline: none;
+  }
+}
 
 textarea.form-control {
-  resize: none; }
+  resize: none;
+}
 
 img.sinbadge {
   position: absolute;
   width: 500px;
   bottom: 0;
   right: 0;
-  z-index: -1; }
+  z-index: -1;
+}
 
 .loader {
   position: absolute;
   top: 100px;
   right: 50%;
-  display: none; }
+  display: none;
+}
 
 div.modal-content {
   background-color: #f6f7f8;
-  border-color: #f9596d; }
-  div.modal-content button.btn {
+  border-color: $primary-color;
+  button.btn {
     background-color: transparent;
-    color: #f9596d;
+    color: $primary-color;
     font-weight: 600;
     font-family: sincity, sans-serif;
     -webkit-transition: all 200ms ease-in-out;
@@ -117,22 +144,31 @@ div.modal-content {
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
     font-size: 16px;
-    border: none; }
+    border: none;
+  }
+}
 
 div.content {
   padding: 15px;
   background-color: white;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 34px -12px #bdb7bd;
-  -moz-box-shadow: 0px 0px 34px -12px #bdb7bd;
-  box-shadow: 0px 0px 34px -12px #bdb7bd; }
-  div.content ul {
-    display: inline-block; }
-  div.content h4.title {
+
+  -webkit-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  -moz-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  ul {
+    display: inline-block;
+  }
+  h4.title {
     font-family: 'Shadows Into Light Two', cursive;
     font-size: 1.7em;
-    color: #f9596d; }
-  div.content h4.recipent {
+    color: $primary-color;
+  }
+  h4.recipent {
     font-family: 'Helvetica', cursive;
     font-size: 1.4em;
-    color: #333; }
+    color: #333;
+  }
+}
+
+

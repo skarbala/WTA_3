@@ -1,0 +1,21 @@
+{
+  "name": "wta_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run scss-compile",
+    "scss-compile": "node-sass -rw scss -o css",
+    "watch": "npm run scss-compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skarbala/WTA_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skarbala/WTA_3/issues"
+  },
+  "homepage": "https://github.com/skarbala/WTA_3#readme"
+}
