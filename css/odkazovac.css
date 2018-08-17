@@ -34,10 +34,7 @@ li.sin div.description {
 div.description p {
     display: inline-block;
     margin: 0 20px;
-}
-
-div.description p.pending {
-    color: red;
+    float: right;
 }
 
 h1,
@@ -60,7 +57,7 @@ h3 span {
     margin-right: 10px;
 }
 
-div.detail h4 span {
+div.detail div.title span.date {
     float: right;
 }
 
@@ -141,10 +138,6 @@ img.sinbadge {
     display: none;
 }
 
-div.detail {
-    position: relative;
-}
-
 div.modal-content {
     background-color: #f6f7f8;
     border-color: #f9596d;
@@ -163,3 +156,31 @@ div.modal-content button.btn {
     font-size: 16px;
     border: none;
 }
+
+div.content {
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+    -moz-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+    box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+}
+
+div.content ul {
+    display: inline-block;
+}
+
+div.content h4.title {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.7em;
+    color: #f9596d;
+
+}
+
+div.content h4.recipent {
+    font-family: 'Helvetica', cursive;
+    font-size: 1.4em;
+    color: #333;
+}
+

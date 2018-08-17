@@ -6,5 +6,4 @@
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
-
 </head>

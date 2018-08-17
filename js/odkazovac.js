@@ -1,5 +1,6 @@
-var detail = $('div.detail article');
+var detail = $('div.detail div.content');
 var loader = $('.loader');
+detail.hide();
 
 $("li.sin").click(function (event) {
     event.preventDefault();
@@ -13,19 +14,20 @@ $("li.sin").click(function (event) {
 });
 
 function fillInDetail(data) {
-    detail.find('h4').text(data.author + " : " + data.title);
+    detail.find('div.title').find('h4').text(data.title);
+    detail.find('div.title').find('h4.recipent').text(data.author);
     detail.find('p').text(data.message);
-    detail.find('h4').append("<span>" + data.creation_date + "</span>");
-    var tags = detail.find('ul').html('');
+    detail.find('div.title').find('span.date').text(data.creation_date);
+    var tags = detail.find('ul');
     if (data.tags) {
         data.tags.forEach(function (element) {
-            tags.append('<li>' + element + '</li>');
+            tags.append('<li>#' + element + '</li>');
         });
     } else {
         tags.append('<li>no tags</li>')
     }
-
 }
+
 function loadDetail(key) {
     $.ajax({
         url: baseURL + 'get-detail.php',

@@ -26,8 +26,6 @@ $data = load_data();
                 <li class="sin">
                     <?php echo $message->title ?>
                   <div class="description">
-                    <p class="<?php echo ($message->forgiven) ? "" : "pending" ?>">
-                        <?php echo ($message->forgiven) ? "forgiven" : "pending" ?></p>
                     <a data="<?php echo $message->id ?>" href="">detail</a>
                   </div>
                 </li>
