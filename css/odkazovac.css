@@ -31,7 +31,7 @@ div.description p {
   float: right; }
 
 h1, h3 {
-  font-family: 'Shadows Into Light Two', cursive; }
+  font-family: "Shadows Into Light Two", cursive; }
 
 h1 {
   color: #f9596d;
@@ -56,12 +56,12 @@ div.tags li {
   div.tags li:nth-child(even) {
     color: #f9596d; }
 
-li.sin a:hover {
-  text-decoration: none; }
-
 li.sin:hover {
   transform: scale(1.03);
   cursor: pointer; }
+
+a li.sin:hover {
+  text-decoration: none; }
 
 input.form-control,
 textarea.form-control,
@@ -104,13 +104,13 @@ img.sinbadge {
   display: none; }
 
 div.modal-content {
-  background-color: #f6f7f8;
+  background-color: white;
   border-color: #f9596d; }
   div.modal-content button.btn {
     background-color: transparent;
     color: #f9596d;
     font-weight: 600;
-    font-family: sincity, sans-serif;
+    font-family: "Shadows Into Light Two", cursive;
     -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
     -ms-transition: all 200ms ease-in-out;
@@ -122,14 +122,11 @@ div.modal-content {
 div.content {
   padding: 15px;
   background-color: white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 34px -12px #bdb7bd;
-  -moz-box-shadow: 0px 0px 34px -12px #bdb7bd;
-  box-shadow: 0px 0px 34px -12px #bdb7bd; }
+  border-radius: 5px; }
   div.content ul {
     display: inline-block; }
   div.content h4.title {
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: "Shadows Into Light Two", cursive;
     font-size: 1.7em;
     color: #f9596d; }
   div.content h4.recipent {

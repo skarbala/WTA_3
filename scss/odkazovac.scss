@@ -1,4 +1,18 @@
 $primary-color: #f9596d;
+$primary-font: 'Shadows Into Light Two', cursive;
+@mixin transition() {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+@mixin shadow() {
+  -webkit-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  -moz-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+}
 
 body {
   background-color: #f6f7f8;
@@ -15,15 +29,8 @@ li.sin {
   padding: 5px 20px;
   border-bottom: 0;
   background-color: white;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-
-  -webkit-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
-  -moz-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
-  box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
+  @include transition();
+  @include shadow();
 }
 
 li.sin div.description {
@@ -39,7 +46,7 @@ div.description p {
 }
 
 h1, h3 {
-  font-family: 'Shadows Into Light Two', cursive;
+  font-family: $primary-font;
 }
 
 h1 {
@@ -74,13 +81,15 @@ div.tags li {
   }
 }
 
-li.sin a:hover {
-  text-decoration: none;
-}
+li.sin {
+  &:hover {
 
-li.sin:hover {
-  transform: scale(1.03);
-  cursor: pointer;
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  a &:hover {
+    text-decoration: none;
+  }
 }
 
 input.form-control,
@@ -96,11 +105,7 @@ button.btn {
   color: white;
   font-weight: 600;
   font-family: sincity, sans-serif;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include transition();
   font-size: 16px;
   &:hover {
     transform: scale(1.03);
@@ -131,18 +136,14 @@ img.sinbadge {
 }
 
 div.modal-content {
-  background-color: #f6f7f8;
+  background-color: white;
   border-color: $primary-color;
   button.btn {
     background-color: transparent;
     color: $primary-color;
     font-weight: 600;
-    font-family: sincity, sans-serif;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+    font-family: $primary-font;
+    @include transition();
     font-size: 16px;
     border: none;
   }
@@ -153,14 +154,11 @@ div.content {
   background-color: white;
   border-radius: 5px;
 
-  -webkit-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
-  -moz-box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
-  box-shadow: 0px 0px 34px -12px rgba(189, 183, 189, 1);
   ul {
     display: inline-block;
   }
   h4.title {
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: $primary-font;
     font-size: 1.7em;
     color: $primary-color;
   }
@@ -170,5 +168,3 @@ div.content {
     color: #333;
   }
 }
-
-
