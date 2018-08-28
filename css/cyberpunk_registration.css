@@ -1,0 +1,82 @@
+@font-face {
+  font-family: Kill The Noise;
+  src: url("../assets/kill_the_noise.otf") format("opentype"); }
+
+body {
+  background: url("../assets/img/cyberpunk.jpg"); }
+
+input.form-control {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  color: #fdee06;
+  margin: 20px auto;
+  font-size: 1.2em; }
+
+input.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #645d06;
+  opacity: 1;
+  /* Firefox */ }
+
+input.form-control.has-error::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fd3374;
+  opacity: 1;
+  /* Firefox */ }
+
+.form-control.colorOne {
+  border-bottom: 2px solid #807506; }
+
+input.form-control:focus {
+  outline: none;
+  background-color: transparent;
+  color: #fdee06;
+  border-bottom: 2px solid #fdee06; }
+
+.form-control.has-error {
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #fd3374; }
+
+div.form-group {
+  margin-top: 80px;
+  padding: 50px;
+  background-color: #090c3b; }
+
+.header {
+  color: #fdee06;
+  font-family: 'Kill The Noise', cursive;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px; }
+  .header span {
+    color: #fd3374;
+    font-size: 60px;
+    margin: 0 15px; }
+
+button.btn {
+  font-family: 'Kill The Noise', cursive;
+  background-color: #ccbd06;
+  color: #090c3b;
+  border-radius: 0;
+  margin-top: 50px;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  font-size: 35px; }
+
+button.btn:hover {
+  background-color: #fdee06;
+  cursor: pointer; }
+
+div.success {
+  text-align: center;
+  color: #fdee06;
+  margin-top: 30px; }
+  div.success p {
+    font-family: 'Kill The Noise', cursive;
+    font-size: 3em; }

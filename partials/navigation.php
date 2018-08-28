@@ -3,7 +3,8 @@ $navigation = [
     "click me baby",
     "registracia",
     "kalkulacka",
-    "odkazovac"
+    "odkazovac",
+    "cyberpunk_registration"
 
 ];
 $current_page = basename($_SERVER['REQUEST_URI'], ".php");
