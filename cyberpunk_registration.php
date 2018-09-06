@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="css/cyberpunk_registration.css">
 <body>
 <?php include 'partials/navigation.php' ?>
-<div class="container" id="app">
-  <div class="form-group col-md-6 col-md-offset-8">
+<div class="container-fluid" id="app">
+  <div class="form-group col-md-4 col-md-offset-6 col-sm-6">
     <h2 class="header">Sign Up for the <span>future</span></h2>
     <input type="email"
            class="form-control colorOne"
