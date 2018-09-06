@@ -1,5 +1,5 @@
 $primary-yellow: #fdee06;
-$primary-font:'Kill The Noise', cursive;
+$primary-font: 'Kill The Noise', cursive;
 @font-face {
   font-family: Kill The Noise;
   src: url("../assets/kill_the_noise.otf") format("opentype");
@@ -17,6 +17,12 @@ input.form-control {
   color: $primary-yellow;
   margin: 20px auto;
   font-size: 1.2em;
+  &:focus {
+    outline: none;
+    background-color: transparent;
+    color: $primary-yellow;
+    border-bottom: 2px solid $primary-yellow;
+  }
 }
 
 input.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -31,13 +37,6 @@ input.form-control.has-error::placeholder { /* Chrome, Firefox, Opera, Safari 10
 
 .form-control.colorOne {
   border-bottom: 2px solid #807506;
-}
-
-input.form-control:focus {
-  outline: none;
-  background-color: transparent;
-  color: $primary-yellow;
-  border-bottom: 2px solid $primary-yellow;
 }
 
 .form-control.has-error {

@@ -2,59 +2,7 @@
 <html>
 <?php include 'partials/head.php'; ?>
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
-<style>
-  input {
-    margin-bottom: 10px;
-  }
-
-  button.btn {
-    margin-bottom: 20px;
-  }
-
-  body {
-    background-color: #fdfdfd;
-  }
-
-  h1 {
-    font-size: 40px;
-    margin-bottom: 50px;
-
-  }
-
-  h1, h2, h3 {
-    font-family: 'Press Start 2P', serif;
-    color: #4d4d4d;
-    text-shadow: 2px 2px 1px #a3a4a6;
-  }
-
-  button.btn, input.form-control {
-    border-radius: 0;
-  }
-
-  button.btn {
-    margin: 0;
-  }
-
-  #result {
-    margin: 30px 0;
-  }
-
-  ul.latest-results {
-    list-style: none;
-  }
-
-  ul.latest-results li {
-    float: none;
-    font-family: 'Press Start 2P', serif;
-    color: #686868;
-    font-size: 1.0em;
-  }
-  div.result-wrapper h3{
-    margin-top: 0;
-  }
-
-</style>
+<link rel="stylesheet" href="css/calculator.css">
 <body>
 <?php include 'partials/navigation.php' ?>
 <div class="container">

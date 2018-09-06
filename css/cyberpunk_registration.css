@@ -13,6 +13,11 @@ input.form-control {
   color: #fdee06;
   margin: 20px auto;
   font-size: 1.2em; }
+  input.form-control:focus {
+    outline: none;
+    background-color: transparent;
+    color: #fdee06;
+    border-bottom: 2px solid #fdee06; }
 
 input.form-control::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -28,12 +33,6 @@ input.form-control.has-error::placeholder {
 
 .form-control.colorOne {
   border-bottom: 2px solid #807506; }
-
-input.form-control:focus {
-  outline: none;
-  background-color: transparent;
-  color: #fdee06;
-  border-bottom: 2px solid #fdee06; }
 
 .form-control.has-error {
   outline: none;
