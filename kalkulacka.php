@@ -84,10 +84,8 @@
         function validateSecondInput() {
             var secondInput = $("#secondInput");
             if (!$.isNumeric(secondInput.val())) {
-                $(secondInput).parent().addClass("has-error");
                 return false;
             }
-            $(secondInput).parent().removeClass("has-error");
             return true;
         }
 
@@ -120,7 +118,7 @@
 
         $("#reset").click(function () {
             $("#firstInput").val("");
-            $("#secondInput").val("");
+            $("#secondInput").val("vynulovane");
             $("#result").text("");
         });
     });
