@@ -22,7 +22,7 @@
 
   }
 
-  h1, h2 {
+  h1, h2, h3 {
     font-family: 'Press Start 2P', serif;
     color: #4d4d4d;
     text-shadow: 2px 2px 1px #a3a4a6;
@@ -40,13 +40,27 @@
     margin: 30px 0;
   }
 
+  ul.latest-results {
+    list-style: none;
+  }
+
+  ul.latest-results li {
+    float: none;
+    font-family: 'Press Start 2P', serif;
+    color: #686868;
+    font-size: 1.0em;
+  }
+  div.result-wrapper h3{
+    margin-top: 0;
+  }
+
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>
 <div class="container">
   <div class="row">
     <h1 class="text-center">Kalkulacka</h1>
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-4 col-md-offset-1">
       <div>
         <div>
           <input type="text" class="form-control" id="firstInput" placeholder="prve cislo">
@@ -64,6 +78,12 @@
         <h1>Výsledok</h1>
         <h2 id="result"></h2>
       </div>
+
+    </div>
+    <div class="col-md-6 result-wrapper">
+      <h3>Posledne vypocty</h3>
+      <ul class="latest-results">
+      </ul>
     </div>
   </div>
 </div>
@@ -93,7 +113,12 @@
             validateInput();
             validateSecondInput();
             if (validateInput() && validateSecondInput()) {
-                $("#result").text(parseInt($("#firstInput").val()) + parseInt($("#secondInput").val()));
+                var firstNumber = $("#firstInput").val();
+                var secondNumber = $("#secondInput").val();
+                var result = parseInt(firstNumber) + parseInt(secondNumber);
+                $("#result").text(result);
+                appendResult(firstNumber, secondNumber, result, "-");
+                appendResult(firstNumber, secondNumber, result, "-");
             }
         });
 
@@ -101,7 +126,11 @@
             validateInput();
             validateSecondInput();
             if (validateInput() && validateSecondInput()) {
-                $("#result").text(parseInt($("#firstInput").val()) - parseInt($("#secondInput").val()));
+                var firstNumber = $("#firstInput").val();
+                var secondNumber = $("#secondInput").val();
+                var result = parseInt(firstNumber) - parseInt(secondNumber);
+                $("#result").text(result);
+                appendResult(firstNumber, secondNumber, result, "-");
             }
         });
         $("#multiply").click(function () {
@@ -112,7 +141,11 @@
             validateInput();
             validateSecondInput();
             if (validateInput() && validateSecondInput()) {
-                $("#result").text(parseInt($("#firstInput").val()) / parseInt($("#secondInput").val()));
+                var firstNumber = $("#firstInput").val();
+                var secondNumber = $("#secondInput").val();
+                var result = parseInt(firstNumber) / parseInt(secondNumber);
+                $("#result").text(result);
+                appendResult(firstNumber, secondNumber, result, "/");
             }
         });
 
@@ -121,6 +154,11 @@
             $("#secondInput").val("vynulovane");
             $("#result").text("");
         });
+
+        function appendResult(firstNumber, secondNumber, result, method) {
+            var resultList = $("ul.latest-results");
+            resultList.append("<li>" + firstNumber + "" + method + "" + secondNumber + " = " + result + "</li>");
+        }
     });
 
 </script>
