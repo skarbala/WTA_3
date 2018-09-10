@@ -13,11 +13,28 @@ $("li.sin").click(function (event) {
 
 });
 
+$('#confirm').click(function () {
+    $.ajax({
+        url: baseURL + 'erase-all-sins.php',
+        type: 'GET'
+    })
+        .done(function () {
+            $("#sinCityModal").modal('hide');
+            $("div.sinsListArea").remove();
+            $("h3.sin-header span").text("(0)");
+        })
+        .fail(function (msg) {
+        })
+        .always(function () {
+        });
+});
+
 function fillInDetail(data) {
     detail.find('div.title').find('h4').text(data.title);
     detail.find('div.title').find('h4.recipent').text(data.author);
     detail.find('p').text(data.message);
     detail.find('div.title').find('span.date').text(data.creation_date);
+    detail.find('button').attr("data", data.id);
     var tags = detail.find('ul');
     if (data.tags) {
         data.tags.forEach(function (element) {
@@ -46,3 +63,25 @@ function loadDetail(key) {
         .always(function () {
         });
 }
+
+
+$('#confirm_delete_one').click(function () {
+    var key = detail.find('button').attr('data');
+    console.log(key);
+    $.ajax({
+        url: baseURL + 'delete.php',
+        data: {key: key},
+        type: 'POST',
+        dataType: "json"
+    })
+        .done(function (data) {
+            console.log(data);
+            $("#myModal").modal('hide');
+            $('article#' + data.id).hide();
+        })
+        .fail(function (msg) {
+        })
+        .always(function () {
+        });
+});
+

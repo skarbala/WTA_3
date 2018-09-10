@@ -5,7 +5,7 @@ $data = load_data();
 $desired_sin = null;
 foreach ($data as $sin) {
     if ($searched_id == $sin->id) {
-        $sin->forgiven = true;
+        $sin->deleted = true;
         $desired_sin = $sin;
     }
 }

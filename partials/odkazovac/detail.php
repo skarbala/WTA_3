@@ -11,5 +11,11 @@
     <div class="tags">
       <ul></ul>
     </div>
+    <button class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#myModal"
+            data="">
+      Vymazat
+    </button>
   </div>
 </div>

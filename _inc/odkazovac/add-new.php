@@ -15,7 +15,7 @@ if (validate()) {
         "message" => $_POST['message'],
         "title" => $_POST['title'],
         "author" => $_POST['author'],
-        "forgiven" => false,
+        "deleted" => false,
         "creation_date" => date("m.d.y"),
         "tags" => $_POST['tag'],
     ];
