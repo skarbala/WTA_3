@@ -38,9 +38,9 @@ $data = load_data();
     </div>
   </div>
     <?php include 'partials/odkazovac/detail.php' ?>
-    <? include_once "partials/odkazovac/modal.php" ?>
+    <?php include_once "partials/odkazovac/modal.php" ?>
 </div>
-<? include_once "partials/odkazovac/modal_delete_one.php" ?>
+<?php include_once "partials/odkazovac/modal_delete_one.php" ?>
 
 </body>
 
