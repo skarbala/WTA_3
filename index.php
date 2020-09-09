@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <?php include 'partials/head.php'; ?>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet" type="text/css">
 
 <style>
 @font-face {
