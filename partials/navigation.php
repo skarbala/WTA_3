@@ -18,7 +18,7 @@ function makeLink($link)
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">WTA</a>
+      <a class="navbar-brand" href="index.php">QA Academy</a>
     </div>
     <ul class="nav navbar-nav">
         <?php foreach ($navigation as $navigationItem) {
