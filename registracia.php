@@ -90,7 +90,9 @@ function registration_result()
         font-family: Montserrat, serif;
         font-size: 50px;
         margin-bottom: 50px;
-        color: #4c4c4c;
+        font-weight:900;
+        color: #4c4c4c;\
+
     }
 
     input.form-control {
@@ -176,20 +178,20 @@ function registration_result()
     <h1 class="text-center">Registracia</h1>
     <div class="col-md-4 col-md-offset-4">
         <form action="" method="POST">
-            <div class="form-group <? echo validate_empty($email) ? "has-error" : ""; ?>">
-                <input type="email" class="form-control" name="email" placeholder="Email" value="<? echo $email ?>">
+            <div class="form-group <?php echo validate_empty($email) ? "has-error" : ""; ?>">
+                <input type="email" class="form-control" name="email" placeholder="Email" value="<?php echo $email ?>">
             </div>
-            <div class="form-group <? echo validate_empty($name) ? "has-error" : ""; ?>">
-                <input type="text" class="form-control" name="name" placeholder="Meno" value="<? echo $name ?>">
+            <div class="form-group <?php echo validate_empty($name) ? "has-error" : ""; ?>">
+                <input type="text" class="form-control" name="name" placeholder="Meno" value="<?php echo $name ?>">
             </div>
-            <div class="form-group <? echo validate_empty($surname) ? "has-error" : ""; ?>">
+            <div class="form-group <?php echo validate_empty($surname) ? "has-error" : ""; ?>">
                 <input type="text" class="form-control" name="surname" placeholder="Priezvisko"
-                       value="<? echo $surname ?>">
+                       value="<?php echo $surname ?>">
             </div>
-            <div class="form-group <? echo validate_password() ? "has-error" : ""; ?>">
+            <div class="form-group <?php echo validate_password() ? "has-error" : ""; ?>">
                 <input type="password" class="form-control" name="password" placeholder="Heslo">
             </div>
-            <div class="form-group <? echo validate_password() ? "has-error" : ""; ?>">
+            <div class="form-group <?php echo validate_password() ? "has-error" : ""; ?>">
                 <input type="password" class="form-control" name="password-repeat" placeholder="Heslo znovu">
             </div>
             <div class="checkbox form-group">
